@@ -95,13 +95,10 @@ header h4 {
   text-shadow: var(--shadow-text);
 }
 
-header h1 {
-  font-family: var(--ff-cursive);
-  font-size: 5rem;
-  color: var(--clr-accent);
-  
-  letter-spacing: 5px;
-  text-shadow: var(--shadow-text);
+header img{
+  width: 14rem;
+  aspect-ratio: 14%;
+  margin: 2em;
 }
 .tamu {
   margin-bottom: 4em;
@@ -392,7 +389,7 @@ footer {
 .m-logo{
   position: relative;
   top: 1.2em;
-  right: 0.4em;
+  right: 0.8em;
 }
 .h-logo{
   position: relative;

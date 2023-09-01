@@ -11,31 +11,31 @@ const mySong = document.getElementById("mySong");
 const bukaUndangan = document.getElementById("button_open");
 const tombolIcon = document.getElementById("button_music");
 const logoIcon = document.getElementById("icon_music");
+const rootElement = document.querySelector("html")
 
-// header button
 function showIconMusic() {
   tombolIcon.style.visibility = "visible";
 }
 
+// disable scroll when reload
 function disableScroll() {
-  document.body.classList.add("stop-scrolling");
+  scrollTop = window.scrollY || document.documentElement.scrollTop;
+  scrollLeft = window.scrollX || document.documentElement.scrollLeft;
 }
 
-function enableScroll() {
-  document.body.classList.remove("stop-scrolling");
-}
+window.onscroll = function () {window.scrollTo(scrollTop, scrollLeft);}
+function enableScroll() {window.onscroll = function (){}}
 
+disableScroll()
+
+
+// header button
 bukaUndangan.addEventListener("click", () => {
   mySong.play();
   showIconMusic();
   enableScroll();
 })
 
-disableScroll();
-
-// back to top when reload
-const home = document.getElementById("header");
-home.scrollIntoView();
 
 // change icon play/pause
 tombolIcon.addEventListener("click", () => {
