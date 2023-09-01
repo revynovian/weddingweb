@@ -21,10 +21,17 @@ function showIconMusic() {
 function disableScroll() {
   scrollTop = window.scrollY || document.documentElement.scrollTop;
   scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+
+  window.onscroll = function () {
+    window.scrollTo(scrollTop, scrollLeft);
+  }
+  rootElement.style.scrollBehavior = 'auto';
 }
 
-window.onscroll = function () {window.scrollTo(scrollTop, scrollLeft);}
-function enableScroll() {window.onscroll = function (){}}
+function enableScroll() {
+  window.onscroll = function (){}
+  rootElement.style.scrollBehavior = 'smooth'
+}
 
 disableScroll()
 
