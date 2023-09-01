@@ -2,7 +2,7 @@
 const params = new URLSearchParams(document.location.search);
   let tamu = params.get("yth");
   if (tamu) {
-    console.log(tamu)
+    // console.log(tamu)
     document.getElementById("nama-tamu").innerHTML = tamu;
 }
 
