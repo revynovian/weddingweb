@@ -103,8 +103,11 @@ header img{
 .tamu {
   margin-bottom: 4em;
 }
-.tamu > * {
+.tamu > h4 {
   font-weight: 400;
+}
+.tamu > h3 {
+  font-weight: 600;
 }
 /* button */
 .button {
