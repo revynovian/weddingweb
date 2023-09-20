@@ -183,6 +183,13 @@ main{
   width: 10em;
 }
 
+.foto-main img{
+  border-radius: 2em;
+  margin: 2em 0.5em;
+  box-shadow: var(--shadow-card);
+  width: 85%;
+}
+
 /* wrapper card */
 .borderCard {
   display: grid;
@@ -192,7 +199,8 @@ main{
   width: 85vw;
 
   border: 1px solid var(--clr-accent);
-  border-radius: 2em;border-style: double;
+  border-radius: 2em;
+  border-style: double;
   border-width: 0.5em;
   box-shadow: var(--shadow-card);
 }
@@ -201,58 +209,11 @@ main{
   padding: 2em 0.5em;
 }
 
-/* for desktop */
-@media (min-width: 50em){ 
-  .gridspan2 {
-    grid-column: span 2;
-  }
-  .borderCard {
-    width: 70vw;
-    padding: 2em;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* header background */
-  header {
-    background-image: url(assets/img/floral_header_desktop.png);
-  }
-  
-
-  /* ornament separator on desktop*/
-  .nama::after {
-    content: '';
-    width: 4rem;
-    height: 3rem;
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(assets/img/floral_separator.png);
-  }
-
-}
-
-@media (max-width: 50em) {
-  /* ornament separator on mobile */
-  .floralSeparator::before {
-    display: block;
-    width: 3rem;
-    height: 2.2rem;
-    content: '';
-    left: 38%;
-    bottom: 2rem;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(assets/img/floral_separator.png);
-}
-}
-
-
 /* main -- nama mempelai */
 .nama img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 200px;
+  height: 300px;
+  border-radius: 6em 6em;
   margin-bottom: 0.5em;
   border: 0.1em solid var(--clr-accent);
   box-shadow: var(--shadow-button);
@@ -361,6 +322,83 @@ main{
   grid-template-columns: 1fr;
 }
 
+/* swiper or carousel  section*/
+/* .swiper-slide img{
+  border-radius: 2em;
+  margin: 2em 0.5em;
+  box-shadow: var(--shadow-card);
+  width: 85%;
+} */
+
+.swiper-wrapper{
+  width: 80vw;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 2em;
+  box-shadow: var(--shadow-card);
+  margin: 2em 0em;
+}
+.swiper-slide {
+  border-radius: 2em;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  transition-delay: 200ms;
+  transition: transform 10s linear;
+}
+
+.swiper-slide[data-active] {
+  opacity: 1;
+  transform: scale(1.2);
+  transition-delay: 0ms;
+}
+
+.slide-1 {
+  background-image: url(assets/img/foto-slide-1.jpg);
+}
+.slide-2 {
+  background-image: url(assets/img/foto-slide-2.jpg);
+}
+.slide-3 {
+  background-image: url(assets/img/foto-slide-3.jpg);
+}
+
+/* swiper button */
+.swiper-button-prev img,
+.swiper-button-next img{
+  background-color: var(--clr-accent);
+  box-shadow: var(--shadow-button);
+  opacity: 90%;
+  width: 2em;
+  height: 2em;
+  margin: 0.6em;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.swiper-button-prev img{
+  transform: scaleX(-1);
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  left: -7%;
+  z-index: 5;
+}
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  right: -7%;
+  z-index: 5;
+}
 
 /* footer section */
 footer {
@@ -396,6 +434,64 @@ footer {
   bottom: 0.8em;
   left: 0.2em;
 }
+
+/* media queries */
+
+/* for desktop */
+@media (min-width: 50em){ 
+  .gridspan2 {
+    grid-column: span 2;
+  }
+  .borderCard {
+    width: 70vw;
+    padding: 2em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .counter {
+    grid-template-columns: 1fr;
+  }
+
+  /* header background */
+  header {
+    background-image: url(assets/img/floral_header_desktop.png);
+  }
+  
+  .swiper-wrapper {
+    width: 40vw;
+    height: 750px;
+  }
+
+  /* ornament separator on desktop*/
+  .nama::after {
+    content: '';
+    width: 4rem;
+    height: 3rem;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(assets/img/floral_separator.png);
+  }
+
+}
+
+@media (max-width: 50em) {
+  /* ornament separator on mobile */
+  .floralSeparator::before {
+    display: block;
+    width: 3rem;
+    height: 2.2rem;
+    content: '';
+    left: 38%;
+    bottom: 2rem;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(assets/img/floral_separator.png);
+}
+}
+
+
 
 /* -- animation -- */
 /* animation on header-page*/

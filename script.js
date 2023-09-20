@@ -66,3 +66,36 @@ const observer = new IntersectionObserver((entries)=> {
 const hiddenElements = document.querySelectorAll('.anim');
 
 hiddenElements.forEach((e)=> observer.observe(e))
+
+// swiper section
+const buttons = document.querySelectorAll("[data-swiper-button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", ()=> {
+    const offset = button.dataset.swiperButton === 'next' ? 1 : -1;
+    const slides = button.closest("[data-swiper]").querySelector("[data-slides]")
+
+    const activeSlide = slides.querySelector("[data-active]");
+    let slideNewIndex = [...slides.children].indexOf(activeSlide) + offset;
+
+    if(slideNewIndex <0 ) slideNewIndex = slides.children.length -1;
+    if (slideNewIndex >= slides.children.length) slideNewIndex = 0;
+
+    slides.children[slideNewIndex].dataset.active = true;
+    delete activeSlide.dataset.active
+
+  })
+})
+
+setInterval(function(){
+  const slides = document.querySelector("[data-slides]")
+  const activeSlide = slides.querySelector("[data-active]");
+  let slideIndex = [...slides.children].indexOf(activeSlide)+1;
+
+  if(slideIndex <0 ) slideIndex = slides.children.length -1;
+  if (slideIndex >= slides.children.length) slideIndex = 0;
+
+  slides.children[slideIndex].dataset.active = true;
+  slideIndex++
+  delete activeSlide.dataset.active
+}, 5000)
