@@ -41,9 +41,9 @@
 
 /* custom properties */
 :root {
-  --clr-primary: #92a376;
-  --clr-secondary: #e5e9d7;
-  --clr-accent: #6e001b;
+  --clr-primary: #a48e65;
+  --clr-secondary: #fff8e6;
+  --clr-accent: #d8a815;
 
   --ff-cursive: 'Signature', serif;
   --ff-text: 'Raleway', sans-serif;
