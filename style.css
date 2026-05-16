@@ -78,7 +78,7 @@
 /* style */
 html {
     scroll-behavior: smooth;
-    max-width: 400px;
+    /*max-width: 400px;*/
 }
 body {
     text-align: center;
@@ -229,7 +229,7 @@ main {
     background-position: center;
     background-size: cover;
     width: 100%;
-    max-width: 400px;
+    /*max-width: 400px;*/
 }
 .floral img {
     width: 10em;
@@ -738,5 +738,5 @@ footer h1 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 400px;
-}
+    /*max-width: 400px;
+}*/
