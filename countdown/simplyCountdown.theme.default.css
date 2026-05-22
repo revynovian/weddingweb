@@ -1,16 +1,8 @@
-@font-face {
-    font-family: "Raleway";
-    font-weight: 600;
-    src:
-        url("../assets/font/Raleway-SemiBold.woff2") format("woff2"),
-        url("../assets/font/Raleway-SemiBold.woff") format("woff");
-}
-
 .simply-countdown {
     overflow: hidden;
     display: flex;
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
     padding-top: 0;
 }
 .simply-countdown > .simply-section {
