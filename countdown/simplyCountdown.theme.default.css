@@ -6,8 +6,8 @@
     padding-top: 0;
 }
 .simply-countdown > .simply-section {
-    width: 4rem;
-    height: 4rem;
+    width: 5em;
+    height: 5em;
     padding: 0.5em;
     margin: 0em 0.1em 0em 0.1em;
 
@@ -30,10 +30,10 @@
 }
 
 .simply-amount {
-    font-size: 2rem;
+    font-size: 3em;
 }
 .simply-word {
-    font-size: 0.8rem;
+    font-size: 1em;
 }
 
 /* for desktop */

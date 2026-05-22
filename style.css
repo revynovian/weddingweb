@@ -691,6 +691,9 @@ footer h1 {
     border-radius: 2em;
     box-shadow: var(--shadow-card);
     background-color: #fff8e6ab;
+
+    display: grid;
+    place-items: center;
 }
 
 .logo_dana {
@@ -738,4 +741,30 @@ footer h1 {
 .ornament {
     height: 200px;
     width: 200px;
+}
+
+.wave-right {
+    animation: wave-right 4s ease-in-out 1.5s infinite alternate;
+}
+
+@keyframes wave-right {
+    0% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-4deg);
+    }
+}
+
+.wave-left {
+    animation: wave-left 4s ease-in-out 1.5s infinite alternate;
+}
+
+@keyframes wave-left {
+    0% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(4deg);
+    }
 }
